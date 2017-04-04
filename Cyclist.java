@@ -1,7 +1,7 @@
 package participant;
 
 import java.util.Random;
-/*Swimer preserent the Cyclist */
+/*Swimmer present the Cyclist */
 public class Cyclist extends Person implements Athlete {
 	/*Construction method*/
 	Cyclist(String name, String state, int age) {
