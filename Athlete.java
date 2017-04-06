@@ -1,7 +1,19 @@
+//written by JIAHUI LI
 package participant;
 
-/*create a interface which has method of compete to generate number.*/
-public interface Athlete {
-	/*a method to generate a number of a game*/
-	public double compete(String s);
+public abstract class Athlete extends Person implements Competable {
+	Athlete(String name, String state, int age) {
+		super(name, state, age);
+	}
+    //each Athlete has his/her scores
+	private int scores;
+     
+	/*the set/get method of the scores*/
+	public int getScores() {
+		return scores;
+	}
+
+	public void addScores(int scores) {
+		this.scores += scores;
+	}
 }
