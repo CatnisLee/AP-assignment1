@@ -1,9 +1,9 @@
-//written by JIAHUI LI
+// Written by JIAHUI LI
 package participant;
 
-//the SwimGame
+//SwimGame
 public class SwimGame extends Game {
-	//the constructor of the swimGame
+	//Here is the constructor of SwimGame.
 	public SwimGame(String s){
 		setID(s);
 		this.setType("S");

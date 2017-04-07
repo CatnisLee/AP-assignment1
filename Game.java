@@ -1,25 +1,29 @@
-//written by JIAHUI LI
+// Written by JIAHUI LI
 package participant;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
 
-/*define a abstract class Game*/
+// Firstly, define a abstract class Game.
 public abstract class Game {
-	//denfine an ArrayList to collect the Athlete of a game.
 	private ArrayList<Athlete> athleteOfOneGame = new ArrayList<Athlete>();
-	//denfine an ArrayList to store the time of every athlete in the game
+	//Define an ArrayList in order to collect the Athlete of Game.
+	
 	private ArrayList<Double> timesOfOneGame = new ArrayList<Double>();
-	//to store the top 3 Athlete ,which will add points and be displayed in console
+	//Define an ArrayList in order to store the time of each athlete in a game.
+	
 	private ArrayList<Athlete> top3 = new ArrayList<Athlete>();
+	//Aims to store the Athlete of top 3 ,which will add points and be displayed in console.
+
 	private String ID;  
 	private String type;
-	private Official referee;   //a game has an Official to be the referee.
+	private Official referee;   
+	//Each game has an Official as a referee.
 
 	
 	public void start(){
-		//run the method of all athlete
+		//In order to run the method of all athletes.
 		for(Athlete athlete : this.athleteOfOneGame){
 			timesOfOneGame.add(athlete.compete(type));
 		}
@@ -27,7 +31,7 @@ public abstract class Game {
 			System.out.println("\t" + time);
 		}
 		System.out.println();
-		//let the referee to return the top3 athlete's index in int[] top3
+		//Let the referee to return the index of top3 athlete's  in int[] top3 .
  		int[] top = referee.summarise(athleteOfOneGame,timesOfOneGame);
 		top3.add(athleteOfOneGame.get(top[0]));
 		athleteOfOneGame.get(top[0]).addScores(5);   //reward the athlete
@@ -39,7 +43,7 @@ public abstract class Game {
 	}
 	
 	
-    //to dispaly all the athlete of a game
+    	//In order to display all athletes of a game.
 	public void displayAllAthlete(){
 		for(Athlete athlete : athleteOfOneGame){
 			System.out.println( athlete + "\t" + athlete.getScores());
@@ -47,7 +51,7 @@ public abstract class Game {
 	}
 	
 	
-	/* set/get medoths of the class*/
+	// Set/Get methods of the class.
 	public ArrayList<Athlete> getTop3(){
 		return top3;
 	}

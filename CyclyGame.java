@@ -1,9 +1,9 @@
-// written by JIAHUI LI
+// Written by JIAHUI LI
 package participant;
 
-//the cyclyGame
+//CyclyGame
 public class CyclyGame extends Game {
-	//the constructor of the clclyGame
+	//Here is the constructor of CyclyGame.
 	public CyclyGame(String s){
 		setID(s);
 		this.setType("C");

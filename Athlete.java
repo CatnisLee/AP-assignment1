@@ -1,14 +1,14 @@
-//written by JIAHUI LI
+// Written by JIAHUI LI
 package participant;
 
 public abstract class Athlete extends Person implements Competable {
 	Athlete(String name, String state, int age) {
 		super(name, state, age);
 	}
-    //each Athlete has his/her scores
+    //Each Athlete has themselves scores.
 	private int scores;
      
-	/*the set/get method of the scores*/
+	//Here is the method of the scores.
 	public int getScores() {
 		return scores;
 	}

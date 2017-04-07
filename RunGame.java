@@ -1,9 +1,9 @@
-// written by JIAHUI LI
+// Written by JIAHUI LI
 package participant;
 
-//the runGame
+//RunGame
 public class RunGame extends Game {
-	//the constructor of the runGame
+	//Here is the constructor of RunGame.
 	public RunGame(String s){
 		setID(s);
 		this.setType("R");
